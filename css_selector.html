@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> <!--header font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet"> <!--foods font-->
+    <title>정동준/60191685/기초웹프로그래밍 과제 #2</title>
+    <!--필수 사항
+    ➢ html 문서내 <head>에 <style>태그로 스타일 작성
+    ➢ 다양한 셀렉터 적용
+        ✓ 태그 셀렉터, id 셀렉터, class 셀렉터
+        ✓ 전체 셀렉터, 가상 클래스 셀렉터, 셀렉터 조합 포함
+    ➢ 다양한 색 적용
+    ➢ 글자 꾸미기 적용-->
+    
+    <style>
+        * {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        header {
+            font: bold 40px 'Lobster', cursive;
+            color: blue; background-color: aqua;
+            text-align: center;
+            margin-left: 10%; margin-right: 10%;
+        }
+        p {
+            text-align: justify;
+            text-indent: 2em;
+        }
+        p::first-letter {
+            font-size: large;
+            font-weight: bold;
+        }
+        .foods {
+            font: italic bold 1.2em 'Nanum Pen Script', cursive;
+        }
+        .foods:hover {
+            text-decoration: underline;
+        }
+        .red {
+            color: red;
+        }
+        #redFood {
+            color: white;
+            background-color: red;
+        }
+        .green {
+            color: green;
+        }
+        #greenFood {
+            color: white;
+            background-color: green;
+        }
+        .yellow {
+            color: orange;
+        }
+        #yellowFood {
+            color: white;
+            background-color: orange;
+        }
+
+        footer a {
+            color: pink;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+            background-color: pink;
+            text-decoration: none;
+        }
+        footer a:active {
+            color: white;
+            background-color: pink;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Color Food</h1></header>
+    <br>
+    <section>
+        <article class="green">
+            <h3>자연 치유력을 높이는 <span id="greenFood">그린 푸드</span></h3>
+            <p style="background-color: rgb(0, 255, 0, 0.5);">
+                초록색 식품은 우리의 몸과 마음을 편안하게 해준다. 
+                특히 초록색 과일과 야채에는 풍부한 엽록소가 들어있어 
+                신진대사를 원활하게 해주고, 피로를 풀어 주며, 신체의 
+                자연 치유력을 높여 준다. 
+                <span class="foods">매실, 브로컬리, 시금치, 녹차</span> 등이 대표 식품이다.
+            </p>
+        </article>
+        <article class="red">
+            <h3>혈액순환을 돕는 <span id="redFood">레드 푸드</span></h3>
+            <p style="background-color: rgb(255, 0, 0, 0.5);">
+                빨간색을 띠는 식품은 활력을 복돋우고 무기력과 피로를 해소해 준다. 
+                또한 심장을 맑고 튼튼하게 해주며 혈액순환을 도와준다. 과일과 채소의 
+                붉은색에는 리코펜과 안토시아닌이 들어 있는데, 이들 영양소는 피를 맑게
+                하고 식용을 돋우는 작용을 한다. 
+                <span class="foods">딸기, 토마토, 수박, 홍고추, 사과, 팥</span> 등이 대표 식품이다.
+            </p>
+        </article>
+        <article class="yellow">
+            <h3>소화기관에 좋은 <span id="yellowFood">옐로 푸드</span></h3>
+            <p style="background-color: rgb(255, 255, 0, 0.5);">
+                노란색 과일과 야채에 함유된 카로티노이드 성분은 항암 효과와 함께 천연 
+                변비약으로서 몸에 쌓인 독성을 제거하는 기능을 한다. 또한 비장과 위장의 
+                기능을 복돋워 주고 소화력 증진과 성인병 예방에 도움을 준다. 
+                <span class="foods">당근, 바나나, 오렌지, 단호박, 고구마</span> 등이 대표 식품이다.
+            </p>
+        </article>
+    </section>
+    <hr>
+    <footer>컬러 푸드에 대한 자세한 정보를 알고 싶으면 <a href="#">여기를 클릭</a> 하세요.</footer>
+</body>
+</html>
