@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 구조를 가진 표 만들기</title>
+
+    <style>
+        #first {
+            border: 1px solid blue;
+            border-collapse: collapse;
+        }
+        #first thead th {
+            height: 40px;
+            width: 100px;
+        }
+        #first td, #first th {
+            border: 1px dotted green;
+            height: 20px;
+            width: 100px;
+            padding: 10px;
+            text-align: right;
+        }
+
+        #second {
+            border-collapse: collapse;
+        }
+        #second td, #second th {
+            text-align: left;
+            padding: 10px;
+            height: 10px;
+            width: 100px;
+        }
+        #second thead, #second tfoot {
+            background: darkgray;
+            color: yellow;
+        }
+        #second tbody tr:nth-child(even) {
+            background: aliceblue;
+        }
+        #second tbody tr:hover {
+            background: pink;
+        }
+        #second td, #second tfoot th {
+            border-bottom: 1px solid gray;
+        }
+
+        #third {
+            border: 2px solid brown;
+            border-collapse: collapse;
+        }
+        #third td, #third th {
+            border: 1px dotted magenta;
+        }
+    </style>
+</head>
+<body>
+    <h3>1학기 성적</h3>
+    <hr>
+    <table id="first">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>HTML</th>
+                <th>CSS</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>합</th>
+                <th>175</th>
+                <th>169</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>황기태</td>
+                <td>80</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>이재문</td>
+                <td>95</td>
+                <td>99</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table id="second">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>HTML</th>
+                <th>CSS</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>합</th>
+                <th>310</th>
+                <th>249</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>황기태</td>
+                <td>80</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>이재문</td>
+                <td>95</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td>이병은</td>
+                <td>85</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>김남윤</td>
+                <td>50</td>
+                <td>40</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>코로나 환자 현황</h2>
+    <table id="third">
+        <caption>코로나 지역별 발생동향</caption>
+        <thead>
+            <tr>
+                <th>시도명</th>
+                <th>누적확진환자</th>
+                <th>격리중</th>
+                <th>격리해제</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <th>21,177</th>
+                <th>4,697</th>
+                <th>16,146</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>서울</td>
+                <td>4,214</td>
+                <td>2,063</td>
+                <td>2,225</td>
+            </tr>
+            <tr>
+                <td>대구</td>
+                <td>7,082</td>
+                <td>106</td>
+                <td>6,785</td>
+            </tr>
+            <tr>
+                <td>경기</td>
+                <td>3,625</td>
+                <td>1,221</td>
+                <td>2,359</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
