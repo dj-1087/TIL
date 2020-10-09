@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7주차 실습 2 - 폼 스타일</title>
+    <style>
+        fieldset {
+            width: 600px;
+            border: dashed 2px coral;
+            border-radius: 10px;
+            margin: 30px 0px 0px 30px;
+            padding: 30px;
+        }
+        legend {
+            color: coral;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        label {
+            display: block;
+            margin: 20px;
+        }
+        label span {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        label.check {
+            display: inline-block;
+            margin: 15px 0px;;
+        }
+        input, select, textarea {
+            border: 2px solid coral;
+            border-radius: 5px;
+        }
+        input[type=password]:hover,
+        input[type=email]:hover,
+        input[type=url]:hover,
+        input[type=tel]:hover,
+        input[type=search]:hover,
+        input[type=data]:hover,
+        input[type=time]:hover,
+        input[type=number]:hover,
+        input[type=color]:hover,
+        input[type=text]:hover,
+        select:hover, textarea:hover { background: rgba(255, 134, 90, 0.301); }
+
+        input[type=text]:focus,
+        input[type=password]:focus,
+        input[type=email]:focus,
+        input[type=url]:focus,
+        input[type=tel]:focus,
+        input[type=search]:focus,
+        input[type=number]:focus {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h3>폼 태그 전체 연습</h3>
+    <hr>
+    <form name="fo" action="#" method="get">
+        <fieldset>
+            <legend>개인 정보</legend>
+
+            <label><span>사용자 ID</span>
+            <input type="text" size="15" value=""></label>
+
+            <label><span>비밀 번호</span>
+            <input type="password" id="pwd" size="15" value=""></label>
+
+            <label><span>email</span><input type="email" placeholder="id@host"></label>
+            <label><span>홈페이지</span><input type="url" placeholder="http://"></label>
+            <label><span>전화번호</span><input type="tel" placeholder="010-1234-5678"></label>
+
+            <label><span>국적(input-datalist)</span><input type="text" name="country" list="countries"></label>
+            <datalist id="countries">
+                <option value="가나">
+                <option value="스위스">
+                <option value="브라질">
+            </datalist>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>메뉴 선택</legend>
+            <label><span>메뉴 검색</span><input type="search" name="menuSearch" placeholder="메뉴 이름"></label>
+
+            <label><span>메뉴(select)</span>
+                <select name="chinaS" id="menuS">
+                    <option value="1">짜장면</option>
+                    <option value="2" selected>짬뽕</option>
+                    <option value="3">탕수육</option>
+                </select>
+            </label>
+
+            <label class="check"><span>짜장면 <img src="media/jajang.png"></span>
+                <input type="checkbox" name="chinaC" value="1"></label>
+            <label class="check"><span>짬뽕 <img src="media/jjambbong.png"></span>
+                <input type="checkbox" name="chinaC" value="2"></label>
+            <label class="check"><span>탕수육 <img src="media/tangsuyuk.png"></span>
+                <input type="checkbox" name="chinaC" value="3"></label>
+        
+            <label class="check"><span>짜장면 <img src="media/jajang.png"></span>
+                <input type="radio" name="chinaR" value="1"></label>
+            <label class="check"><span>짬뽕 <img src="media/jjambbong.png"></span>
+                <input type="radio" name="chinaR" value="2"></label>
+            <label class="check"><span>탕수육 <img src="media/tangsuyuk.png"></span>
+                <input type="radio" name="chinaR" value="3"></label>
+
+            <br><br>
+            <label><span>배달일</span><input type="date" value=""></label>
+            <label><span>배달시간</span><input type="time" value=""></label>
+            <label><span>기타 요구사항</span><textarea cols="50" rows="4">기타 요구사항을 쓰세요.</textarea></label>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>환경 설정</legend>
+            글자색 선택 <input type="color" name="textColor" id="textColor" value="#00BFFF" onchange="document.body.style.color = this.value">
+            <br>
+            배경색 선택 <input type="color" name="backgroundColor" id="backgroundColor" value="#000FFF" onchange="document.body.style.background = this.value">
+            <br>
+
+            웹프로그래밍 학습 시간 (0.0~10.0시간) :
+            <input type="number" name="duration" id="duration" min="0.0" max="10.0" step="0.5"><br><br>
+            적정 학습 온도 : 10&deg;
+            <input type="range" name="temp" id="temp" min="10" max="30">30&deg;
+        </fieldset>
+        <br><br>
+        <input type="reset" value="취소">
+        <input type="submit" value="완료">
+    </form>
+</body>
+</html>
