@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_practice</title>
+</head>
+<body>
+    <h3>로그인 폼</h3>
+    <form action="#" method="get">
+        사용자 ID: <input type="text" size="15" value=""><br>
+        비밀번호: <input type="password" size="15" value="">
+        <input type="submit" value="완료">
+    </form>
+    <hr>
+
+    <h3>네이버 폼</h3>
+    <form name="sform" action="https://search.naver.com/search.naver" method="get" target="_blank">
+        <input type="text" name="query">
+        <input type="submit" value="검색">
+    </form>
+    <hr>
+    
+    <h3>자기 소개서 작성</h3>
+    <form>
+        이름: <input type="text" value=""><br>
+        암호: <input type="password" value="" maxlength="4"><br>
+        자소서: <textarea cols="20" rows="5">이곳에 자소서 작성</textarea>
+    </form>
+    <hr>
+    
+    <h3>가보고 싶은 곳</h3>
+    <form action="#">
+        나라: <input type="text" list="countries"><br>
+        <datalist id="countries">
+            <option value="가나">
+            <option value="스위스">
+            <option value="브라질">
+        </datalist>
+        보고싶은것: <input type="text" list="what"><br>
+        <datalist id="what">
+            <option value="산"></option>
+            <option value="바다"></option>
+            <option value="도시"></option>
+        </datalist>
+    </form>
+    <hr>
+
+    <h3>버튼을 만들자</h3>
+    <form action="">
+        검색: <input type="text" size="10" value="">
+        <input type="button" value="Q1">
+        <button type="button">Q2</button><br>
+        submit 버튼: 
+        <input type="submit" value="전송1">
+        <button type="submit">전송2</button><br>
+        reset 버튼:
+        <input type="reset" value="리셋1">
+        <button type="reset">리셋</button><br>
+        이미지 버튼:
+        <input type="image" src="media\button.png" alt="이미지 버튼">
+        <button type="button"><img src="media\button.png" alt="이미지 버튼"></button>
+    </form>
+    <hr>
+
+    <h3>먹고 싶은 것 모두 체크하세요</h3>
+    <form action="">
+        짜장면 <input type="checkbox" value="1">
+        짬뽕 <input type="checkbox" value="2" checked>
+        탕수육 <input type="checkbox" value="3">
+    </form><br>
+    <h3>먹고 싶은 것 하나만 선택?</h3>
+    <form action="">
+        <input type="radio" name="china" value="1">
+        짜장면 <img src="media/jajang.png"><br>
+        <input type="radio" name="china" value="2" checked>
+        짬뽕 <img src="media/jjambbong.png"><br>
+        <input type="radio" name="china" value="3">
+        탕수육 <img src="media/tangsuyuk.png">
+    </form><br>
+    <h3>오늘 점심은?</h3>
+    <form>
+        <select name="china">
+            <option value="1">짜장면</option>
+            <option value="2">짬뽕</option>
+            <option value="3">탕수육</option>
+        </select>
+    </form><br>
+    <hr>
+    
+    <h3>로그인 폼 &lt;label&gt;</h3>
+    <form action="">
+        <label>사용자 ID: <input type="text" size="15" value=""></label><br>
+        <label for="pwd">비밀 번호:</label>
+        <input type="password" id="pwd" size="15" value="">
+        <input type="submit" value="완료">
+    </form>
+    <hr>
+
+    <h3>먹고 싶은 것 하나만 선택? &lt;label&gt;</h3>
+    <form action="">
+        <label>
+            <input type="radio" name="china" value="1">
+            짜장면 <img src="media/jajang.png">
+        </label><br>
+        <label>
+            <input type="radio" name="china" value="2" checked>
+            짬뽕 <img src="media/jjambbong.png">
+        </label><br>
+        <label>
+            <input type="radio" name="china" value="3">
+            탕수육 <img src="media/tangsuyuk.png">
+        </label>
+    </form>
+    <hr>
+
+    <h3>컬러다이얼로그로 색 입력</h3>
+    <form action="">
+        색 선택
+        <input type="color" value="#00BFFF" onchange="document.body.style.color=this.value">
+    </form>
+    <hr>
+
+    <h3>시간 정보 입력 HTML5 폼 요소들</h3>
+    <div>
+        초기 세팅: 2016년 9월 1일 밤 9시 30분(10초 32)
+        
+    </div>
+</body>
+</html>
