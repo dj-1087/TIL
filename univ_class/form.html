@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정동준/60191685/기초웹프로그래밍 과제 #4</title>
+    <style>
+        body{
+            background: whitesmoke;
+        }
+        header{
+            color: lightskyblue;
+        }
+        hr {
+            border: 0px;
+            height: 2px;
+            background-color: lightskyblue;
+        }
+        fieldset {
+            position: relative;
+            left: 15%;
+            width: 70%;
+            border: 3px dashed lightskyblue;
+            border-radius: 10px;
+            margin: 10px 0px;
+            padding: 0px 10px;
+            padding-bottom: 10px;
+            color: rgb(87, 86, 86);
+
+        }
+        legend {
+            color: lightskyblue;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        label span {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        input, select, textarea {
+            border: 2px solid lightskyblue;
+            border-radius: 5px;
+        }
+        /*Personal Information*/
+        #PI {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            font-weight: bold;
+        }
+        #end {
+            position: relative;
+            left: 75%;
+        }
+        input[type=submit],
+        input[type=reset] {
+            width: 70px; height: 30px;
+            font-size: 1.2em; color: lightskyblue;
+            background: white;
+            margin: 0px, 10px;
+            border: 2px solid lightskyblue;
+            border-radius: 5px;
+        }
+        a {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MBTI 성격 유형 검사</h3>
+        <hr>
+    </header>
+    <section>
+        <form action="#">
+            <fieldset>
+                <legend>안내사항</legend>
+                <ul>
+                    <li>총 검사 시간은 12분 내외입니다.</li>
+                    <li>혹 질문이 마음에 들지 않더라도 정직하게 답변하십시오.</li>
+                    <li>가능하면 답변 시 '중립'을 선택하지 마십시오.</li>
+                </ul>
+            </fieldset>
+            <fieldset id="PI">
+                <legend>개인정보</legend>
+                <label>
+                    <span>사용자 ID</span>
+                    <input type="text" size="15" value="">
+                </label><br>
+                <label>
+                    <span>비밀번호</span>
+                    <input type="password" size="15" value="">
+                </label><br>
+                <label>
+                    <span>email</span>
+                    <input type="email" placeholder="id@host">
+                </label><br>
+                <label>
+                    <span>홈페이지</span>
+                    <input type="url" placeholder="https://">
+                </label><br>
+                <label>
+                    <span>전화번호</span>
+                    <input type="tel" placeholder="010-1234-5678">
+                </label><br>
+                <label>
+                    <span>지역</span>
+                    <select name="countries">
+                        <option value="서울">서울</option>
+                        <option value="부산">부산</option>
+                        <option value="대구">대구</option>
+                        <option value="인천">인천</option>
+                        <option value="광주">광주</option>
+                        <option value="대전">대전</option>
+                        <option value="울산">울산</option>
+                        <option value="세종">세종</option>
+                        <option value="경기">경기</option>
+                        <option value="강원">강원</option>
+                        <option value="제주">제주</option>
+                        <option value="충청북도">충청북도</option>
+                        <option value="충청남도">충청남도</option>
+                        <option value="전라북도">전라북도</option>
+                        <option value="전라남도">전라남도</option>
+                        <option value="경상북도">경상북도</option>
+                        <option value="경상남도">경상남도</option>
+                    </select>
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>질문</legend>
+                <ol type="1">
+                    <li>
+                        다른 사람들에게 자신을 소개하는 것을 어려워 합니다. <br>
+                        동의
+                        <label> 1. <input type="radio" name="Q1" value="1"></label>
+                        <label> 2. <input type="radio" name="Q1" value="2"></label>
+                        <label> 3. <input type="radio" name="Q1" value="3"></label>
+                        <label> 4. <input type="radio" name="Q1" value="4"></label>
+                        <label> 5. <input type="radio" name="Q1" value="5"></label>
+                        비동의
+                    </li>
+                    <li>
+                        종종 주변을 무시하거나 잊어버리는 생각에 빠지곤 합니다. <br>
+                        동의
+                        <label> 1. <input type="radio" name="Q2" value="1"></label>
+                        <label> 2. <input type="radio" name="Q2" value="2"></label>
+                        <label> 3. <input type="radio" name="Q2" value="3"></label>
+                        <label> 4. <input type="radio" name="Q2" value="4"></label>
+                        <label> 5. <input type="radio" name="Q2" value="5"></label>
+                        비동의
+                    </li>
+                    <li>
+                        이메일에 가능한 빨리 회신하려고 하고 지저분한 편지함을 참을 수 없습니다. <br>
+                        동의
+                        <label> 1. <input type="radio" name="Q3" value="1"></label>
+                        <label> 2. <input type="radio" name="Q3" value="2"></label>
+                        <label> 3. <input type="radio" name="Q3" value="3"></label>
+                        <label> 4. <input type="radio" name="Q3" value="4"></label>
+                        <label> 5. <input type="radio" name="Q3" value="5"></label>
+                        비동의
+                    </li>
+                    <li>
+                        중암갑을 받을 때에도 쉽게 침착하게 집중력을 유지할 수 있습니다. <br>
+                        동의
+                        <label> 1. <input type="radio" name="Q4" value="1"></label>
+                        <label> 2. <input type="radio" name="Q4" value="2"></label>
+                        <label> 3. <input type="radio" name="Q4" value="3"></label>
+                        <label> 4. <input type="radio" name="Q4" value="4"></label>
+                        <label> 5. <input type="radio" name="Q4" value="5"></label>
+                        비동의
+                    </li>
+                    <li>
+                        보통 대화를 먼저 시작하지 않습니다. <br>
+                        동의
+                        <label> 1. <input type="radio" name="Q5" value="1"></label>
+                        <label> 2. <input type="radio" name="Q5" value="2"></label>
+                        <label> 3. <input type="radio" name="Q5" value="3"></label>
+                        <label> 4. <input type="radio" name="Q5" value="4"></label>
+                        <label> 5. <input type="radio" name="Q5" value="5"></label>
+                        비동의
+                    </li>
+                    <li>
+                        순전히 호기심 때문에 행동을 하는 경우는 거의 없습니다. <br>
+                        동의
+                        <label> 1. <input type="radio" name="Q6" value="1"></label>
+                        <label> 2. <input type="radio" name="Q6" value="2"></label>
+                        <label> 3. <input type="radio" name="Q6" value="3"></label>
+                        <label> 4. <input type="radio" name="Q6" value="4"></label>
+                        <label> 5. <input type="radio" name="Q6" value="5"></label>
+                        비동의
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>약관 동의</legend>
+                <label>
+                    <input type="checkbox" name="이용약관">
+                    <small><a href="#">이용약관</a>에 동의합니다.(필수)</small>
+                </label><br>
+                <label>
+                    <input type="checkbox" name="이용약관">
+                    <small><a href="#">개인정보 수집 및 이용</a>에 동의합니다.(필수)</small>
+                </label><br>
+                <label>
+                    <input type="checkbox" name="이용약관">
+                    <small><a href="#">마케팅/홍보의 수집 및 이용</a>에 동의합니다.(선택)</small>
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Comment</legend>
+                <textarea cols="100" rows="10">더 정확한 검사가 될 수 있도록 소감을 한 번씩 써주세요.</textarea>
+            </fieldset>
+            <br><br>
+            <div id="end">
+                <input type="reset" value="취소">
+                <input type="submit" value="완료">
+            </div>
+        </form>
+    </section>
+    <footer></footer>
+</body>
+</html>
