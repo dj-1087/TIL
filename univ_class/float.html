@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8주차 실습 -float-</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        .big { width: 900px; }
+        .titleimg { float: left; }
+        .title{
+            width: 100%;
+            height: 145px;
+            font-size: 4em;
+            text-align: center;
+            padding-top: 45px;
+            background: url("img/20659.jpg") no-repeat;
+            float: left;
+        }
+        #list1, #list2, #list3, #list4 {
+            width: 20%;
+            float: left;
+            font-size: 1.8em;
+            padding: 50px 0px 50px 5%;
+        }
+        #list1 { background: red; color: white; }
+        #list2 { background: yellow; }
+        #list3 { background: green; color: white; }
+        #list4 { background: blue; color: white; }
+    </style>
+</head>
+<body>
+    <div class="big">
+        <img class="titleimg" src="img/4401.jpg" alt="고양이1" width="300px" height="150px">
+        <img class="titleimg" src="img/5726.jpg" alt="고양이2" width="300px" height="150px">
+        <img class="titleimg" src="img/77503.jpg" alt="고양이3" width="300px" height="150px">
+        
+        <h1 class="title">Color Psychology</h1>
+        <div id="list1">
+            <h2>Red</h2>
+            <ul>
+                <li>Excitement</li>
+                <li>Passion</li>
+                <li>Strengh</li>
+                <li>Danger</li>
+            </ul>
+        </div>
+        <div id="list2">
+            <h2>yellow</h2>
+            <ul>
+                <li>Cheerful</li>
+                <li>Hunger</li>
+                <li>Warmth</li>
+                <li>Optimism</li>
+            </ul>
+        </div>
+        <div id="list3">
+            <h2>Green</h2>
+            <ul>
+                <li>Growth</li>
+                <li>Health</li>
+                <li>Wealth</li>
+                <li>Responsibility</li>
+            </ul>
+        </div>
+        <div id="list4">
+            <h2>Blue</h2>
+            <ul>
+                <li>Trust</li>
+                <li>Truth</li>
+                <li>Strength</li>
+                <li>Dependable</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
