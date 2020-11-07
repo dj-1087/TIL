@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로토타입 오버라이드</title>
+  <script>
+    function Student(name, kor, math, eng) {
+      this.name = name;
+      this.kor = kor;
+      this.math = math;
+      this.eng = eng;
+    }
+
+    Student.prototype.getAvg = function() { return (this.kor+this.math+this.eng)/3; }
+    Student.prototype.printInfo = function() { return this.name + "|" + this.getAvg().toFixed(2); }
+  </script>
+</head>
+<body>
+  <h3>프로토타입 오버라이드</h3>
+  <hr>
+  <script>
+    var students = [];
+    students.push(new Student('나하늘', 89, 99, 95));
+    students.push(new Student('신구름', 90, 83, 85));
+    students.push(new Student('최고야', 98, 100, 98));
+    students.push(new Student('장난이', 78, 85, 74));
+    students.push(new Student('이바다', 85, 80, 83));
+
+    students[2].sci = 92;
+    students[2].getAvg = function() {
+      return (this.kor + this.math + this.eng + this.sci)/4;
+    }
+    for(var i in students) {
+      document.write(students[i].printInfo()+"<br>");
+    }
+  </script>
+</body>
+</html>
