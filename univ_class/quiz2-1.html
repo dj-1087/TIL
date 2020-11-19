@@ -1,0 +1,41 @@
+<!-- 정동준 60191685 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>퀴즈 2-1 내이름/학번</title>
+  <style>
+    body {
+      font-size: 1.5em;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <h3>입력한 숫자를 오름차순으로 정렬합니다. </h3>
+  <div>Input numbers: <span id="input"></span></div>
+  <div>Ordered numbers: <span id="ordered"></span></div>
+</body>
+<script>
+  // 적절한 코드를 채우시오. 
+  var numbers = prompt(`여러 숫자를 한 줄에(빈칸 " "로 구분해서) 입력하세요`);
+  const input = document.getElementById("input");
+  const ordered = document.getElementById("ordered");
+  numbers = numbers.split(" ");
+  let numbersArr = ""
+  for (const e of numbers) {
+    numbersArr += e + " ";
+  }
+  input.innerHTML = numbersArr;
+
+  numbers.sort((a, b) => (parseInt(a) - parseInt(b)));
+  numbersArr="";
+  for (const e of numbers) {
+    numbersArr += e + " ";
+  }
+  ordered.innerHTML = numbersArr;
+</script>
+
+</html>
